@@ -68,31 +68,31 @@ Gestionar pagos y reportes.
 
 🔑 Inicio de Sesión
 Usuario: admin, password: 12345
-![](img/Captura1.png)
+![](img/Captura1.PNG)
 
 🖥️ Panel Principal
 
-![](img/Captura2.png)
+![](img/Captura2.PNG)
 
 📚 Registro de Cursos
-![](img/Captura3.png)
-![](img/Captura4.png)
+![](img/Captura3.PNG)
+![](img/Captura4.PNG)
 👨‍🏫 Profesores
-![](img/Captura5.png)
-![Asignación del Horario para un profesor ](img/Captura6.png)
+![](img/Captura5.PNG)
+![Asignación del Horario para un profesor ](img/Captura6.PNG)
 
 
 🧑Estudiantes
 
-![](img/Captura7.png)
+![](img/Captura7.PNG)
 👥Grupos
 
-![](img/Captura8.png)
+![](img/Captura8.PNG)
 
-![Programación del horario de un grupo](img/Captura9.png)
+![Programación del horario de un grupo](img/Captura9.PNG)
 
-![Programación del horario de un grupo](img/Captura10.png)
-![Asistencia de los estudiantes de un  grupo](img/Captura11.png)
+![Programación del horario de un grupo](img/Captura10.PNG)
+![Asistencia de los estudiantes de un  grupo](img/Captura11.PNG)
 
 ✒️ Autor
 
