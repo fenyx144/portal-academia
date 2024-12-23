@@ -1,0 +1,43 @@
+<?php
+    include_once '../bd/conexion.php';
+    $objeto = new Conexion();
+    $conexion = $objeto->Conectar();
+    // Recepción de los datos enviados mediante POST desde el JS   
+    $request_body = file_get_contents('php://input');
+    
+    //Decodificar el JSON a un arreglo asociativo de PHP
+    
+    $data = json_decode($request_body, true);
+    if ($data['opcion'] == 1) {
+        $idPaquete = $data['idPaquete'];
+        $idProfesor = $data['idProfesor'];
+        $idCurso = $data['idCurso'];
+        $fecha = $data['fecha'];
+        $horaInicio = $data['horaInicio']; 
+        $horaFin = $data['horaFin'];
+        $observaciones = $data['observaciones'];
+        $consulta = "INSERT INTO clases_paquete (fecha, id_profesor, id_curso, hora_inicio, hora_fin, id_paquete, observaciones)
+            VALUES('$fecha', '$idProfesor', '$idCurso', '$horaInicio', '$horaFin', '$idPaquete', '$observaciones') ";
+        $resultado = $conexion->prepare($consulta);
+        $resultado->execute();
+        echo json_encode(
+            array(
+                "mensaje" => "La inserción se realizó correctamente",
+                'data' => $data
+        ));
+        /*if ($idEstudiante == -1 ) {
+            $DNI = $data['DNIEstudiante'];
+            $nombres = $data['nombresEstudiante'];
+            $apellidos = $data['apellidosEstudiante'];
+            $telefono = $data['telefonoEstudiante'];
+            
+            $consulta = "INSERT INTO estudiantes (DNI_estudiante, nombres_estudiante, apellidos_estudiante, telefono_estudiante) 
+                VALUES('$DNI', '$nombres', '$apellidos', '$telefono') ";
+            $resultado = $conexion->prepare($consulta);
+            $resultado->execute();
+
+            $idEstudiante = $conexion->lastInsertId();
+        }*/
+    }
+    $conexion = NULL;
+?>
